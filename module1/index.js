@@ -1,5 +1,6 @@
 // Модуль 1. Основы Node.js
-
+// npm init -y инициализация проекта
+// --Общее--
 // const { getCurentData } = require("./dateUtils");
 // global.testData = "global (из index.js)";
 // global.testData = 1;
@@ -14,7 +15,36 @@
 // console.log(__dirname);
 // console.log(__filename);
 
-const Calc = require("calc-js").Calc;
-console.log(process.argv);
-const [, , a, b] = process.argv;
-console.log(new Calc(parseInt(a)).sum(parseInt(b)).finish());
+// --calc-js приложение--
+
+// const Calc = require("calc-js").Calc;
+// console.log(process.argv);
+// // const [, , a, b] = process.argv;
+// // или
+// const a = process.argv[2];
+// const b = process.argv[3];
+
+// console.log(new Calc(parseInt(a)).sum(parseInt(b)).finish());
+
+// --Работа с путями --
+
+// fs.readFile(filename, [options]) - чтение файла
+// fs.writeFile(filename, data, [options]) - запись файла
+// fs.appendFile(filename, data, [options])- добавление в файл
+// fs.rename(oldPath, newPath) - переименование файла.
+// fs.unlink(path, callback) - удаление файла.
+
+// const path = require("path");
+
+// console.log(path.resolve("dateUtils.js"));
+// console.log(path.resolve("dateUtils.js"));
+
+const fs = require("fs");
+fs.readFile("./data.txt", "utf8", (error, data) => {
+  if (error) {
+    console.error(error);
+  }
+  console.error(data);
+});
+
+console.log(123456);
