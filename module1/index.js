@@ -39,12 +39,32 @@
 // console.log(path.resolve("dateUtils.js"));
 // console.log(path.resolve("dateUtils.js"));
 
-const fs = require("fs");
-fs.readFile("./data.txt", "utf8", (error, data) => {
-  if (error) {
-    console.error(error);
-  }
-  console.error(data);
-});
+// const fs = require("fs");
+// fs.readFile("./data.txt", "utf8", (error, data) => {
+//   if (error) {
+//     console.error(error);
+//   }
+//   console.error(data);
+// });
 
-console.log(123456);
+// console.log(123456);
+
+// -- CОЗДАНИЕ СЕРВЕРА --
+
+const http = require("http");
+
+const PORT = 8081;
+
+const requestHandler = (request, response) => {
+  response.writeHead(200, { "Content-Type": "text/html" });
+  response.end("<h1>Test</h1>");
+};
+
+const server = http.createServer(requestHandler);
+
+server.listen(8081, (err) => {
+  if (err) {
+    return console.log("something bad happened", err);
+  }
+  console.log(`OK ${PORT}!`);
+});
