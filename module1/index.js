@@ -56,8 +56,10 @@ const http = require("http");
 const PORT = 8081;
 
 const requestHandler = (request, response) => {
-  response.writeHead(200, { "Content-Type": "text/html" });
-  response.end("<h1>Test</h1>");
+  // response.writeHead(200, { "Content-Type": "text/html" });
+  response.writeHead(200, { "Content-Type": "text/json" });
+  // response.end("<h1>Test</h1>");
+  response.end(JSON.stringify({ a: 1, b: [] }));
 };
 
 const server = http.createServer(requestHandler);
