@@ -1,9 +1,11 @@
-// const config = require("./config");
+const config = require("./config");
 
-// console.log("config", config);
+console.log("config", config);
 
 // ES6
 
-import config from "./config.js";
+// import config from "./config.js";
 
-console.log("config", config);
+// console.log('global', global)
+
+// console.log("config", config);
