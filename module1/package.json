@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/EvgenyDibrovsky/node.js-practice#readme",
   "dependencies": {
-    "calc-js": "^2.0.7"
+    "calc-js": "^2.0.7",
+    "dotenv": "^16.0.3"
   }
 }
