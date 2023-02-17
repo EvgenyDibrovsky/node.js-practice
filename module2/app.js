@@ -10,7 +10,7 @@ app.get("/contacts", (req, res) => {
 app.get("/contacts:id", (req, res) => {
   console.log(req.query, req.params);
   console.log(req.params.id);
-  
+
   res.send("Hello World!");
 });
 
