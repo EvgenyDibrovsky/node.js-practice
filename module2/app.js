@@ -1,25 +1,25 @@
 const express = require("express");
 const app = express();
 
-app.get("/contacts", (req, res) => {
+app.get("/", (req, res) => {
   console.log(req.query, req.params);
 
   res.send("Hello World!");
 });
 
-app.get("/contacts:id", (req, res) => {
-  console.log(req.query, req.params);
-  console.log(req.params.id);
+// app.get("/contacts:id", (req, res) => {
+//   console.log(req.query, req.params);
+//   console.log(req.params.id);
 
-  res.send("Hello World!");
-});
+//   res.send("Hello World!");
+// });
 
-app.get("/contacts:id", (req, res) => {
-  console.log(req.query, req.params);
-  console.log(req.params.id);
+// app.get("/contacts:id", (req, res) => {
+//   console.log(req.query, req.params);
+//   console.log(req.params.id);
 
-  res.send("Hello World!");
-});
+//   res.send("Hello World!");
+// });
 // для отправки на сервер (например регистрация пользователя)
 // app.post("/", (req, res) => {
 //   const body = reg.body;
