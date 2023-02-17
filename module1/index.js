@@ -1,4 +1,5 @@
 // Модуль 1. Основы Node.js
+
 // npm init -y инициализация проекта
 // --Общее--
 // const { getCurentData } = require("./dateUtils");
@@ -34,6 +35,23 @@
 // fs.rename(oldPath, newPath) - переименование файла.
 // fs.unlink(path, callback) - удаление файла.
 
+// const fs = require("fs").promises;
+
+// fs.readdir(__dirname)
+//   .then((files) => {
+//     return Promise.all(
+//       files.map(async (filename) => {
+//         const stats = await fs.stat(filename);
+//         return {
+//           Name: filename,
+//           Size: stats.size,
+//           Date: stats.mtime,
+//         };
+//       })
+//     );
+//   })
+//   .then((result) => console.table(result));
+
 // const path = require("path");
 
 // console.log(path.resolve("dateUtils.js"));
@@ -51,22 +69,24 @@
 
 // -- CОЗДАНИЕ СЕРВЕРА --
 
-const http = require("http");
+// const http = require("http");
 
-const PORT = 8081;
+// const PORT = 8081;
 
-const requestHandler = (request, response) => {
-  // response.writeHead(200, { "Content-Type": "text/html" });
-  response.writeHead(200, { "Content-Type": "text/json" });
-  // response.end("<h1>Test</h1>");
-  response.end(JSON.stringify({ a: 1, b: [] }));
-};
+// const requestHandler = (request, response) => {
+//   // response.writeHead(200, { "Content-Type": "text/html" });
+//   response.writeHead(200, { "Content-Type": "text/json" });
+//   // response.end("<h1>Test</h1>");
+//   response.end(JSON.stringify({ a: 1, b: [] }));
+// };
 
-const server = http.createServer(requestHandler);
+// const server = http.createServer(requestHandler);
 
-server.listen(8081, (err) => {
-  if (err) {
-    return console.log("something bad happened", err);
-  }
-  console.log(`OK ${PORT}!`);
-});
+// server.listen(8081, (err) => {
+//   if (err) {
+//     return console.log("something bad happened", err);
+//   }
+//   console.log(`OK ${PORT}!`);
+// });
+
+console.log("first")
