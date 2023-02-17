@@ -12,11 +12,60 @@ async function getfiles() {
   //   const data = await fs.readFile(path.join(__dirname, "./test.json"), "utf8");
   //   console.log(data);
 
-  await fs.rename(
-    path.join(__dirname, "./test.json"),
-    path.join(__dirname, "./JSONtest.json")
+  // --ПРОЧИТАТЬ--
+
+  const data = await fs.readFile(
+    path.join(__dirname, "./JSONtest.json"),
+    "utf8"
   );
+
+  console.log("data", data, typeof data);
+
+  // --ДОПИСАТЬ--
+
+  //   const next = JSON.parse(data);
+
+  //   next.HELLO = "WORLD";
+
+  //   await fs.writeFile(
+  //     path.join(__dirname, "./JSONtest.json"),
+  //     JSON.stringify(next),
+  //     { encoding: "utf8" }
+  //   );
+
+  // --ПЕРЕИМЕНОВАТЬ--
+  //   await fs.rename(
+  //     path.join(__dirname, "./test.json"),
+  //     path.join(__dirname, "./JSONtest.json")
+  //   );
+
+  // -- ПЕРЕЗАПИСЬ --
+
+  //   await fs.writeFile(
+  //     path.join(__dirname, "./JSONtest.json"),
+  //     "это перезапишет содержимое json",
+  //     {
+  //       encoding: "utf8",
+  //     }
+  //   );
+
+  // --ДОПИСАТЬ--
+
+  //   await fs.appendFile(
+  //     path.join(__dirname, "./JSONtest.json"),
+  //     "это добавится в конец содержимого json это немного не то что нужно",
+  //     {
+  //       encoding: "utf8",
+  //     }
+  //   );
+
+  // --УДАЛИТЬ--
+
+  //   await fs.unlink
+  //     path.join(__dirname, "./JSONtest.json"),
+  //   );
 }
+
 getfiles();
 
 // module.exports = getfiles;
