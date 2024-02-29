@@ -5,7 +5,7 @@ __pycache__/
 
 # C extensions
 *.so
-/nod_modules
+
 # Distribution / packaging
 .Python
 build/
